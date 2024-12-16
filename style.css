@@ -1,0 +1,184 @@
+body {
+    font-family: helvetica;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    background: #fafafa;
+  }
+  h3 {
+    margin-top: 30px;
+  }
+  .links-container {
+    width: 400px;
+    margin: 110px auto 0;
+    text-align: center;
+  }
+  .btn {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  .btn-text {
+    display: block;
+    line-height: 20px;
+    padding: 10px 20px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    z-index: 2;
+    border-radius: 5px;
+  }
+  .btn1 .btn-text, .btn1 .bone {
+    background-color: #ff3c41;
+  }
+  .btn1.pick-me .arm {
+    animation-delay: 0.2s;
+  }
+  .btn1 .bone:before {
+    display: none;
+  }
+  .btn2 .btn-text, .btn2 .bone {
+    background-color: #0ebeff;
+  }
+  .btn2 .btn-text.pick-me .arm, .btn2 .bone.pick-me .arm {
+    animation-delay: 0.1s;
+  }
+  .btn2 .bone:before {
+    display: none;
+  }
+  .btn3 .btn-text, .btn3 .bone {
+    background-color: #47cf73;
+  }
+  .btn3 .btn-text.pick-me .arm, .btn3 .bone.pick-me .arm {
+    animation-delay: 0.3s;
+  }
+  .pick-me .arm {
+    display: block;
+    animation: wave 0.5s alternate infinite;
+  }
+  .arm {
+    position: absolute;
+    top: -28px;
+    left: 40px;
+    visibility: hidden;
+    z-index: -1;
+  }
+  .bone {
+    width: 22px;
+    height: 45px;
+    border-radius: 3px 3px 0 0;
+  }
+  .bone:before {
+    content: ".";
+    position: absolute;
+    text-align: left;
+    color: #a0a0a0;
+    width: 22px;
+    font-weight: bold;
+    padding: 4px 2px;
+    line-height: 5px;
+    top: 0px;
+    left: 0;
+    background-color: rgba(250, 250, 245, 0.98);
+    border: 1px solid #cfcfcf;
+    box-sizing: border-box;
+  }
+  .hand {
+    position: absolute;
+    width: 21px;
+    height: 25px;
+    top: -24px;
+    left: 1px;
+    background-color: #ffe0bd;
+    border: 1px solid #E2B783;
+    border-radius: 10px 10px 5px 14px;
+    transform: rotate(35deg);
+    z-index: -2;
+  }
+  .hand:after, .hand:before {
+    content: "";
+    border: 1px solid #E2B783;
+    position: absolute;
+    background-color: #ffe0bd;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    height: 10px;
+    width: 4px;
+    top: -1px;
+  }
+  .hand:before {
+    left: 2px;
+  }
+  .hand:after {
+    left: 12px;
+  }
+  .stick {
+    width: 10px;
+    height: 30px;
+    top: -30px;
+    left: 5px;
+    background: #3F3F3F;
+    position: absolute;
+    z-index: -3;
+    transform: rotate(-50deg);
+  }
+  .stick:after {
+    content: "ME!";
+    color: white;
+    text-align: center;
+    padding: 5px 8px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    height: 20px;
+    color: #fff;
+    border-radius: 2px 2px px 0;
+    background: #686868;
+  }
+  .yeay:before {
+    content: "Woohoo!";
+    position: absolute;
+    top: -14px;
+    left: 15px;
+    animation: wohoo 1s infinite ease-in-out;
+    visibility: hidden;
+    background: -webkit-linear-gradient(-180deg, red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @keyframes wave {
+    0% {
+      visibility: hidden;
+      transform: rotate(-20deg);
+      top: -26px;
+    }
+    100% {
+      visibility: visible;
+      transform: rotate(20deg);
+    }
+  }
+  @keyframes wohoo {
+    0% {
+      visibility: hidden;
+    }
+    25% {
+      visibility: visible;
+      transform: scale(1.4);
+      top: -60px;
+    }
+    75% {
+      visibility: visible;
+      transform: scale(1.8);
+      top: -60px;
+    }
+    100% {
+      visibility: hidden;
+      top: -70px;
+      opacity: 0;
+    }
+  }
+  audio {
+    display: none;
+  }
+  
